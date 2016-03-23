@@ -1,0 +1,10 @@
+// ----------------------------------------------------------------------
+
+  // Background-size
+
+// ----------------------------------------------------------------------
+
+@mixin background-size($string) {
+    -webkit-background-size: $string;
+    background-size: $string;
+}

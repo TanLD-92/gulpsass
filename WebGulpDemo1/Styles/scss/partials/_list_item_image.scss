@@ -1,0 +1,79 @@
+﻿.list-item-img {
+    text-decoration: none;
+    .view-item {
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: auto;
+        right: 0;
+           
+        @include transformHandle(translateX(-100%));
+        @include transformHandleOrigin(0% 100%);
+        background-color: rgba(0, 0, 0, 0.5);
+        background: rgba(119, 0, 36, 0.5);
+        @include opacity(1);
+        @include transition(all 0.3s ease-in-out 0.2s); 
+    }
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        @include transformHandle(translateX(100%));
+        @include transformHandleOrigin(0% 100%);
+        background-color: rgba(0, 0, 0, 0.5);
+        background: rgba(119, 0, 36, 0.5);
+        filter: alpha(opacity=100);
+         @include opacity(1);
+        @include transition(all 0.3s ease-in-out 0.2s); 
+    }
+    &:hover {
+        &:before {
+            @include transformHandle(translateX(-50%));
+            -webkit-transition-delay: 0s;
+            -moz-transition-delay: 0s;
+            -o-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+        &:after {
+            @include transformHandle(translateX(50%));
+            @include transitionDelay(0s);
+        }
+        .content {
+            height: 120px;
+            width: 100%;
+            position: absolute;
+            padding: 15px 10px;
+            overflow: hidden;
+            z-index: 2;
+            @include opacity(1);
+            @include vertical-align-ab();
+        }
+       }
+    }
+    .content {
+
+        background: rgba(0, 0, 0, 0.9);
+        height: 0;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        top: -100%;
+        @include opacity(0.5);
+        overflow: hidden;
+        @include transformHandle(translate(-112px, 166px));
+        @include transformHandleOrigin(0% 100%);
+        @include transition(all 0.2s ease-in-out 0.1s); 
+        color: $white-color;
+    }
+}
+       

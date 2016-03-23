@@ -1,0 +1,56 @@
+﻿.image-content {
+    .imag-circle-content {
+        @include roundedCorners(110);
+    }
+    .imag-border5-content {
+        @include roundedCorners(5);
+    }
+    img {
+        &:hover {
+            @include box-shadow(1px, 2px, 2px, 2px, #000);
+        }
+    }
+}
+.bg-content-img {
+    background-image: url("../images/img-view1.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    &:before {
+        content: '';
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        @include linear-gradient(-10, #cccccc, #333333);
+        @include opacity(0.7);
+
+    }
+    .txt {
+        position: relative;
+        z-index: 3;
+        font-weight: 600;
+    }
+    .image-content-2 {
+        color: red;
+    }
+}
+.transition-content {
+    width: 200px;
+    height: 100px;
+    background-color: $green-color;
+    @include single-transition($green-color, 2s, ease-in-out, 0.5);
+    &:hover {
+        width: 300px;
+    }
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+

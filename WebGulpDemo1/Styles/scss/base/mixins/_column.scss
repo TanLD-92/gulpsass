@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------------
+  // Column mixin
+// ----------------------------------------------------------------------
+
+// Mixin for column count
+// Example: @include column-count(2);
+@mixin column-count($string) {
+  -webkit-column-count: $string;
+     -moz-column-count: $string;
+          column-count: $string;
+}
+
+// Mixin for column gap
+// Example: @include column-gap(26px);
+@mixin column-gap($string) {
+  -webkit-column-gap: $string;
+     -moz-column-gap: $string;
+          column-gap: $string;
+}

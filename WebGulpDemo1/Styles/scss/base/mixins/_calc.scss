@@ -1,0 +1,11 @@
+// ----------------------------------------------------------------------
+
+  // Calc
+  // Example: @include calc(width, "25% - 1em");
+
+// ----------------------------------------------------------------------
+
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}

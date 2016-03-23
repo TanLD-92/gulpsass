@@ -1,0 +1,22 @@
+// example: @include fixed-scroll-top-left(20,20);
+
+@mixin fixed-scroll-top-left($top, $left) {
+	position: fixed;
+	top: $top;
+	left: $left;
+}
+@mixin fixed-scroll-top-right($top, $right) {
+	position: fixed;
+	top: $top;
+	right: $right;
+}
+@mixin fixed-scroll-bottom-left($bottom, $left) {
+	position: fixed;
+	bottom: $bottom;
+	left: $left;
+}
+@mixin fixed-scroll-bottom-right($bottom, $right) {
+	position: fixed;
+	bottom: $bottom;
+	right: $right;
+}

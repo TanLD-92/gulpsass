@@ -1,0 +1,33 @@
+*,
+*:after,
+*:before {
+    @include box-sizing(border-box);
+}
+
+%col {
+    float: left;
+}
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        @extend %col;
+        width: ($i / $grid-columns) * 100%;
+    }
+}
+
+.col:first-child,
+.col-12 {
+    margin-left: 0;
+}
+
+// Grid masonry
+.grid-masonry {
+    @include column-count(2);
+    @include column-gap(26px);
+    .grid-masonry-item {
+        display: inline-block;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
